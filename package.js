@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'redcap3000:server-headers',
+  name: 'server-headers',
   summary: 'Access HTTP headers on server only',
   version: "0.0.1",
   git: 'https://github.com/redcap3000/meteor-headers.git'

@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'gadicohen:headers',
-  summary: 'Access HTTP headers on both server and client',
-  version: "0.0.27",
-  git: 'https://github.com/gadicc/meteor-headers.git'
+  name: 'redcap3000:server_headers',
+  summary: 'Access HTTP headers on server only',
+  version: "0.0.1",
+  git: 'https://github.com/redcap3000/meteor-server_headers.git'
 });
 
 Npm.depends({
@@ -15,9 +15,9 @@ Package.onUse(function(api) {
   api.use('appcache', 'server', { weak: true });
   api.use("meteorhacks:inject-initial@1.0.2", ['server', 'client']);
 
-  api.addFiles('headers-common.js', ['client', 'server']);
+  api.addFiles('headers-common.js',  'server');
   api.addFiles('headers-server.js', 'server');
-  api.addFiles('headers-client.js', 'client');
+ 
 
-  api.export('headers', ['client', 'server']);
+  api.export('headers', 'server');
 });
